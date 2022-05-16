@@ -17,11 +17,11 @@ export class RoomReserve {
   @Prop()
   quantityGuests: number;
 
-  @Prop()
-  nameGuests: string;
+  @Prop({ type: [String] })
+  nameGuests: string[];
 
-  @Prop()
-  emailGuests: string;
+  @Prop({ type: [String] })
+  emailGuests: string[];
 };
 
 export const RoomReserveSchema = SchemaFactory.createForClass(RoomReserve);

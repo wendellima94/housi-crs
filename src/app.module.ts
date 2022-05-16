@@ -4,7 +4,7 @@ import { AppService } from './app.service';
 import { RoomReserveModule } from './room-reserve/room-reserve.module';
 import { MongooseModule } from '@nestjs/mongoose';
 
-const mongoUri = 'mongodb+srv://house-project:cgzTJug6z34xszSM@cluster0.kdyse.mongodb.net/test';
+const mongoUri = 'mongodb+srv://housi-db:3I46gNBLQXtzdOYY@cluster0.kdyse.mongodb.net/test';
 
 @Module({
   imports: [

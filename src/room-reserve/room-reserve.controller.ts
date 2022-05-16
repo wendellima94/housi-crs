@@ -2,16 +2,17 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { RoomReserveService } from './room-reserve.service';
 import { CreateRoomReserveDto } from './dto/create-room-reserve.dto';
 import { UpdateRoomReserveDto } from './dto/update-room-reserve.dto';
+import { convertDate } from 'src/middleware/convertDate';
 
 @Controller('room-reserve')
 export class RoomReserveController {
-  constructor(private readonly roomReserveService: RoomReserveService) {}
+  constructor(private readonly roomReserveService: RoomReserveService) { }
 
   @Post()
-  create(@Body() createRoomReserveDto: CreateRoomReserveDto) {
-    return this.roomReserveService.create(createRoomReserveDto);
+  async create(@Body() createRoomReserveDto: CreateRoomReserveDto) {
+    return await this.roomReserveService.create(createRoomReserveDto);
   }
-
+  
   @Get()
   findAll() {
     return this.roomReserveService.findAll();

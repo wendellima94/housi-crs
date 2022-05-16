@@ -3,8 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { RoomReserveModule } from './room-reserve/room-reserve.module';
 import { MongooseModule } from '@nestjs/mongoose';
+import { mongoUri } from './db/mongoUri';
 
-const mongoUri = 'mongodb+srv://housi-db:3I46gNBLQXtzdOYY@cluster0.kdyse.mongodb.net/test';
 
 @Module({
   imports: [
